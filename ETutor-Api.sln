@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETutor-Api", "ETutor-Api\ETutor-Api.csproj", "{3C9CDE30-8856-472B-A7AF-0469C895E317}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External Projects", "External Projects", "{84923FD5-0047-4416-8A46-59BC43EA2CC1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ETutor-Repositories", "..\ETutor-Repositories\ETutor-Repositories\ETutor-Repositories.csproj", "{040ADD5B-7863-498F-BD41-DA4F44B60C76}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C9CDE30-8856-472B-A7AF-0469C895E317}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C9CDE30-8856-472B-A7AF-0469C895E317}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C9CDE30-8856-472B-A7AF-0469C895E317}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C9CDE30-8856-472B-A7AF-0469C895E317}.Release|Any CPU.Build.0 = Release|Any CPU
+		{040ADD5B-7863-498F-BD41-DA4F44B60C76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{040ADD5B-7863-498F-BD41-DA4F44B60C76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{040ADD5B-7863-498F-BD41-DA4F44B60C76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{040ADD5B-7863-498F-BD41-DA4F44B60C76}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{040ADD5B-7863-498F-BD41-DA4F44B60C76} = {84923FD5-0047-4416-8A46-59BC43EA2CC1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A2FFA9DF-ED43-411F-BBC3-F378DBA440AB}
+	EndGlobalSection
+EndGlobal
