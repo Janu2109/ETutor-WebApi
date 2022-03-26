@@ -20,7 +20,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-    Environment.SetEnvironmentVariable("CONNECTION_STRING", "Data Source=(localdb)\\mssqllocaldb ;Initial Catalog=ETutor;User Id=janu;Password=janu;Integrated Security=false");
+    Environment.SetEnvironmentVariable("CONNECTION_STRING", "Data Source=(localdb)\\mssqllocaldb ;Initial Catalog=GRP27-ETutor;User Id=janu;Password=janu;Integrated Security=false");
 }
 
 

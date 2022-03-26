@@ -35,7 +35,7 @@ namespace ETutor_Api.Controllers.User
         {
             int user = await userRepositoryAsync.Insert(userName, password, firstName, lastName, idNo, city, email);
 
-            return Ok("Success");
+            return Ok(user);
         }
     }
 }
