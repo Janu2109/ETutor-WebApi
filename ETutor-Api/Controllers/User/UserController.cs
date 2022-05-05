@@ -13,6 +13,8 @@ namespace ETutor_Api.Controllers.User
             this.userRepositoryAsync = userRepositoryAsync;
         }
 
+        #region GET
+
         [HttpGet]
         [Route("login")]
         public async Task<IActionResult> Login(string username, string password)
@@ -29,6 +31,26 @@ namespace ETutor_Api.Controllers.User
             }
         }
 
+        [HttpGet]
+        [Route("all")]
+        public async Task<IActionResult> Select_All()
+        {
+            var users = await userRepositoryAsync.Select_All();
+
+            if (users.Count < 0 || null == users)
+            {
+                return BadRequest("Error fetching users");
+            }
+            else
+            {
+                return Ok(users);
+            }
+        }
+
+        #endregion
+
+        #region POST
+
         [HttpPost]
         [Route("register")]
         public async Task<IActionResult> Register(string userName, string password, string firstName, string lastName, long idNo, string city, string email)
@@ -37,5 +59,8 @@ namespace ETutor_Api.Controllers.User
 
             return Ok(user);
         }
+
+        #endregion
+
     }
 }
