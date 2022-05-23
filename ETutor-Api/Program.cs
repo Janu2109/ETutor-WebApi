@@ -12,6 +12,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddCors();
 builder.Services.AddScoped<IDatabase, Database>(i => new Database(Environment.GetEnvironmentVariable("CONNECTION_STRING")));
 builder.Services.AddTransient<IUserRepositoryAsync, UserRepositoryAsync>();
+builder.Services.AddTransient<IModuleRepositoryAsync, ModuleRepositoryAsync>();
+builder.Services.AddTransient<ICourseRepositoryAsync, CourseRepositoryAsync>();
 
 var app = builder.Build();
 

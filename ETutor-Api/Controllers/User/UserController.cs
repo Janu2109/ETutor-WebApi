@@ -47,6 +47,38 @@ namespace ETutor_Api.Controllers.User
             }
         }
 
+        [HttpGet]
+        [Route("lecture")]
+        public async Task<IActionResult> Select_Lecture(int id)
+        {
+            var users = await userRepositoryAsync.Select_Lecture(id);
+
+            if (users.Count < 0 || null == users)
+            {
+                return BadRequest("Error fetching users");
+            }
+            else
+            {
+                return Ok(users);
+            }
+        }
+
+        [HttpGet]
+        [Route("lecturers")]
+        public async Task<IActionResult> Select_Users_Lecturers()
+        {
+            var users = await userRepositoryAsync.Select_Users_Lecturers() ;
+
+            if (users.Count < 0 || null == users)
+            {
+                return BadRequest("Error fetching users");
+            }
+            else
+            {
+                return Ok(users);
+            }
+        }
+
         #endregion
 
         #region POST

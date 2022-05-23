@@ -1,0 +1,16 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP .NET Core service.
+
+version: '3.4'
+
+services:
+  etutorapi:
+    image: etutorapi
+    build:
+      context: .
+      dockerfile: ETutor-Api/Dockerfile
+    ports:
+      - 5122:5122
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    volumes:
+      - ~/.vsdbg:/remote_debugger:rw
