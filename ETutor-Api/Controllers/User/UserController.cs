@@ -94,5 +94,18 @@ namespace ETutor_Api.Controllers.User
 
         #endregion
 
+        #region UPDATE
+
+        [HttpPut]
+        [Route("role")]
+        public async Task<IActionResult> Update_Role(int userId, bool isStudent, bool isLecture, bool isAdmin)
+        {
+            int user = await userRepositoryAsync.Update_Role(userId, isStudent, isLecture, isAdmin);
+
+            return Ok(user);
+        }
+
+        #endregion
+
     }
 }

@@ -14,6 +14,7 @@ builder.Services.AddScoped<IDatabase, Database>(i => new Database(Environment.Ge
 builder.Services.AddTransient<IUserRepositoryAsync, UserRepositoryAsync>();
 builder.Services.AddTransient<IModuleRepositoryAsync, ModuleRepositoryAsync>();
 builder.Services.AddTransient<ICourseRepositoryAsync, CourseRepositoryAsync>();
+builder.Services.AddTransient<IClassesRepositoryAsync, ClassesRepositoryAsync>();
 
 var app = builder.Build();
 
