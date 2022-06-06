@@ -44,6 +44,22 @@ namespace ETutor_Api.Controllers.Classes
             }
         }
 
+        [HttpGet]
+        [Route("all")]
+        public async Task<IActionResult> Select()
+        {
+            var classes = await classesRepositoryAsync.Select();
+
+            if (classes == null || classes.Count == 0)
+            {
+                return BadRequest("No classes found");
+            }
+            else
+            {
+                return Ok(classes);
+            }
+        }
+
         #endregion
 
         #region DELETE

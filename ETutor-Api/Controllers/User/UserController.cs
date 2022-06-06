@@ -94,6 +94,19 @@ namespace ETutor_Api.Controllers.User
 
         #endregion
 
+        #region DELETE
+
+        [HttpDelete]
+        [Route("remove")]
+        public async Task<IActionResult> Delete_user(int userId)
+        {
+            int user = await userRepositoryAsync.Delete_User(userId);
+
+            return Ok(user);
+        }
+
+        #endregion
+
         #region UPDATE
 
         [HttpPut]
