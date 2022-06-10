@@ -48,6 +48,22 @@ namespace ETutor_Api.Controllers.User
         }
 
         [HttpGet]
+        [Route("students/courseId")]
+        public async Task<IActionResult> Select_Students_CourseId(int id)
+        {
+            var users = await userRepositoryAsync.Select_Student_CourseId(id);
+
+            if (users.Count < 0 || null == users)
+            {
+                return BadRequest("Error fetching users");
+            }
+            else
+            {
+                return Ok(users);
+            }
+        }
+
+        [HttpGet]
         [Route("lecture")]
         public async Task<IActionResult> Select_Lecture(int id)
         {
