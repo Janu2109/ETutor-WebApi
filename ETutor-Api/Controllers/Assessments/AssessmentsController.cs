@@ -25,5 +25,25 @@ namespace ETutor_Api.Controllers.Assessments
         }
 
         #endregion
+
+        #region SELECT
+
+        [HttpGet]
+        [Route("select")]
+        public async Task<IActionResult> Select_Assessments()
+        {
+            var assessments = await assessmentsRepositoryAsync.Select_Assessments();
+
+            if (null == assessments || assessments.Count < 1)
+            {
+                return BadRequest("No Modules Found");
+            }
+            else
+            {
+                return Ok(assessments);
+            }
+        }
+
+        #endregion
     }
 }

@@ -32,6 +32,22 @@ namespace ETutor_Api.Controllers.Module
         }
 
         [HttpGet]
+        [Route("student/modules")]
+        public async Task<IActionResult> Select_Modules_Student_Enrolled(int userId)
+        {
+            var modules = await moduleRepositoryAsync.Select_Modules_Student_Enrolled(userId);
+
+            if (null == modules || modules.Count < 1)
+            {
+                return BadRequest("No Modules Found");
+            }
+            else
+            {
+                return Ok(modules);
+            }
+        }
+
+        [HttpGet]
         [Route("select")]
         public async Task<IActionResult> Select_Modules()
         {
