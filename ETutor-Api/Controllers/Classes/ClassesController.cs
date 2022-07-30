@@ -43,6 +43,21 @@ namespace ETutor_Api.Controllers.Classes
                 return Ok(classes);
             }
         }
+        [HttpGet]
+        [Route("module")]
+        public async Task<IActionResult> Select_ModuleId(int moduleId)
+        {
+            var classes = await classesRepositoryAsync.Select_Classes_ModuleId(moduleId);
+
+            if (classes == null || classes.Count == 0)
+            {
+                return BadRequest("No classes found");
+            }
+            else
+            {
+                return Ok(classes);
+            }
+        }
 
         [HttpGet]
         [Route("all")]

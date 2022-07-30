@@ -20,6 +20,8 @@ builder.Services.AddTransient<IStudentsEnrolledRepositoryAsync, StudentsEnrolled
 builder.Services.AddTransient<IFilesRepositoryAsync, FilesRepositoryAsync>();
 builder.Services.AddTransient<IAttendanceRepositoryAsync, AttendanceRepositoryAsync>();
 builder.Services.AddTransient<IAssessmentsRepositoryAsync, AssessmentsRepositoryAsync>();
+builder.Services.AddTransient<IMarkRepositoryAsync, MarkRepositoryAsync>();
+builder.Services.AddTransient<ICommunicationRepositoryAsync, CommunicationRepositoryAsync>();
 
 var app = builder.Build();
 

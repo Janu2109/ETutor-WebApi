@@ -56,6 +56,33 @@ namespace ETutor_Api.Controllers.Files
                 return Ok(user);
             }
         }
+
+       
+
+        [HttpGet]
+        [Route("module")]
+        public async Task<IActionResult> Moudle(int moduleId)
+        {
+            var user = await filesRepositoryAsync.Select_Module(moduleId);
+
+            if (null == user)
+            {
+                return BadRequest("No records found");
+            }
+            else
+            {
+                return Ok(user);
+            }
+        }
+
+        [HttpGet]
+        [Route("download")]
+        public async Task<IActionResult> File(string name)
+        {
+            string Filename = name;
+            byte[] fileBytes = System.IO.File.ReadAllBytes(@"C:\\Users\\Janu Fourie\\Desktop\\WebApp\\Files\\" + Filename);
+            return File(fileBytes, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", Filename);
+        }
         #endregion
 
     }
