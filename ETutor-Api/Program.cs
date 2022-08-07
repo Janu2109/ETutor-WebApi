@@ -23,6 +23,8 @@ builder.Services.AddTransient<IAssessmentsRepositoryAsync, AssessmentsRepository
 builder.Services.AddTransient<IMarkRepositoryAsync, MarkRepositoryAsync>();
 builder.Services.AddTransient<ICommunicationRepositoryAsync, CommunicationRepositoryAsync>();
 builder.Services.AddTransient<ILoginHistoryRepositoryAsync, LoginHistoryRepositoryAsync>();
+builder.Services.AddTransient<IAdminModulesRepositoryAsync, AdminModulesRepositoryAsync>();
+builder.Services.AddTransient<IAdminClassesRepositoryAsync, AdminClassesRepositoryAsync>();
 
 var app = builder.Build();
 
