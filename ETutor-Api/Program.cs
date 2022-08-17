@@ -33,7 +33,8 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-    Environment.SetEnvironmentVariable("CONNECTION_STRING", "Data Source=SICT-SQL.mandela.ac.za ;Initial Catalog=GRP27-ETutor;User Id=GRP27;Password=grp27-soit2022;Integrated Security=false");
+    //Environment.SetEnvironmentVariable("CONNECTION_STRING", "Data Source=SICT-SQL.mandela.ac.za ;Initial Catalog=GRP27-ETutor;User Id=GRP27;Password=grp27-soit2022;Integrated Security=false");
+    Environment.SetEnvironmentVariable("CONNECTION_STRING", "Data Source=tcp:turbojs.database.windows.net,1433;Initial Catalog=GRP27-ETutor;User Id=janu;Password=Mandela2018;Integrated Security=false");
 }
 
 
